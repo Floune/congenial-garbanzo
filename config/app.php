@@ -224,7 +224,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Loginas' => Aelfournier\Loginas\LoginasServiceProvider::class,
-
+        'User' => App\User::class,
     ],
 
 ];

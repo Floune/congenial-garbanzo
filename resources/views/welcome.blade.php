@@ -94,5 +94,8 @@
                 </div>
             </div>
         </div>
+        
+    @include("loginas::loginas")
+
     </body>
 </html>

@@ -5,7 +5,7 @@
     <aside id="users">
         @foreach(\User::all() as $u)
             <li>
-                <a href="/loginas/{{$u->id}}">{{$u->id}}| {{$u->last_name}} {{$u->first_name}} ({{$u->email}})</a>
+                <a href="/loginas/{{$u->id}}">{{$u->id}} | {{$u->name}} ({{$u->email}})</a>
             </li>
         @endforeach
     </aside>
@@ -20,7 +20,7 @@
 
     }
     #debug-loginas .toggle {
-        outline : solid red 1px;
+        outline : solid #ff110a 1px;
     }
     #debug-loginas #users.active {
         display: block;

@@ -1,8 +1,13 @@
 <?php
 
+Route::middleware(['web'])->group(function() {
+
 if (App::environment('local')) {
-    Route::get('/loginas/{user}', function(App\User $user) {
-        Auth::login($user);
-        return back();
+    Route::get('/loginas/{id}', function($id) {
+        $user = \User::find($id);
+
+        \Auth::login($user, true);
+        return redirect('/');
     });
 }
+});

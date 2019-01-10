@@ -16,9 +16,4 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/loginas/{user}', function(App\User $user) {
-    Auth::login($user);
-    return back();
-});
